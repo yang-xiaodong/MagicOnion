@@ -21,10 +21,6 @@
   <ItemGroup Condition="'$(UseNuGetClient)' == ''">
     <PackageReference Include="ConsoleAppFramework" />
   </ItemGroup>
-  <ItemGroup Condition="'$(UseNuGetClient)' == ''">
-    <ProjectReference Include="..\..\..\src\MagicOnion.Client\MagicOnion.Client.csproj" />
-    <ProjectReference Include="..\..\..\src\MagicOnion.Serialization.MemoryPack\MagicOnion.Serialization.MemoryPack.csproj" />
-  </ItemGroup>
 
   <ItemGroup>
     <AssemblyAttribute Include="PerformanceTest.Shared.MagicOnionIsLatestAttirbute">

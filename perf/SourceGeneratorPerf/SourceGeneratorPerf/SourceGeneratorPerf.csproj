@@ -12,9 +12,4 @@
     <PackageReference Include="Microsoft.CodeAnalysis" PrivateAssets="all" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\MagicOnion.Client.SourceGenerator\MagicOnion.Client.SourceGenerator.csproj" />
-    <ProjectReference Include="..\..\..\src\MagicOnion.Client\MagicOnion.Client.csproj" />
-  </ItemGroup>
-
 </Project>

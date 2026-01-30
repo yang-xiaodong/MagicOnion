@@ -4,7 +4,7 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <PropertyGroup>
-    <GrpcVersion>2.57.0</GrpcVersion>
+    <GrpcVersion>2.76.0</GrpcVersion>
     <MemoryPackVersion>1.21.4</MemoryPackVersion>
     <MessagePackVersion>3.1.4</MessagePackVersion>
     <MicrosoftCodeAnalysisVersion>4.3.1</MicrosoftCodeAnalysisVersion>
@@ -17,8 +17,8 @@
     <PackageVersion Include="Grpc.AspNetCore" Version="$(GrpcVersion)" />
     <PackageVersion Include="Grpc.AspNetCore.Server" Version="$(GrpcVersion)" />
     <PackageVersion Include="Grpc.Core.Api" Version="$(GrpcVersion)" />
-    <PackageVersion Include="Grpc.Net.Client" Version="$(GrpcVersion)" />
-    <PackageVersion Include="MemoryPack" Version="$(MemoryPackVersion)" />
+    <PackageVersion Include="Grpc.Net.Client" Version="2.76.0" />
+    <PackageVersion Include="MagicOnion.Client" Version="7.0.9" />
     <PackageVersion Include="MessagePack" Version="$(MessagePackVersion)" />
     <PackageVersion Include="Microsoft.Bcl.TimeProvider" Version="8.0.1" />
     <PackageVersion Include="Microsoft.CodeAnalysis" Version="$(MicrosoftCodeAnalysisVersion)" />
@@ -28,8 +28,6 @@
     <PackageVersion Include="Microsoft.Extensions.Diagnostics" Version="8.0.0" />
     <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
     <PackageVersion Include="Multicaster" Version="$(MulticasterVersion)" />
-    <PackageVersion Include="Multicaster.Distributed.Redis" Version="$(MulticasterVersion)" />
-    <PackageVersion Include="Multicaster.Distributed.Nats" Version="$(MulticasterVersion)" />
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageVersion Include="PolySharp" Version="1.15.0" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="7.0.0" />

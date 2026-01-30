@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MagicOnion.Server.JsonTranscoding\MagicOnion.Server.JsonTranscoding.csproj" />
     <ProjectReference Include="..\MagicOnion.Server.InternalTesting\MagicOnion.Server.InternalTesting.csproj" />
   </ItemGroup>
 

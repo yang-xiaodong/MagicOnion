@@ -26,9 +26,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\MagicOnion.Client\MagicOnion.Client.csproj" />
-    <ProjectReference Include="..\..\src\MagicOnion.Client.SourceGenerator\MagicOnion.Client.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-  </ItemGroup>
-
 </Project>

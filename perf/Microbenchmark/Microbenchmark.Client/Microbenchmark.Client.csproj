@@ -11,8 +11,4 @@
     <PackageReference Include="BenchmarkDotNet" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\MagicOnion.Client\MagicOnion.Client.csproj" />
-  </ItemGroup>
-
 </Project>
