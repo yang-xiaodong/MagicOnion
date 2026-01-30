@@ -1,4 +1,4 @@
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 
 // ReSharper disable once CheckNamespace
 namespace MagicOnion.Client.SourceGenerator;
@@ -8,10 +8,11 @@ internal static class TypeExtensions
     public static string GetFullDeclaringTypeName(this Type type)
     {
         var typeNameParts = new List<string>();
-        while (type != null)
+        Type? current = type;
+        while (current != null)
         {
-            typeNameParts.Insert(0, type.Name);
-            type = type.DeclaringType;
+            typeNameParts.Insert(0, current.Name);
+            current = current.DeclaringType;
         }
         return string.Join(".", typeNameParts);
     }

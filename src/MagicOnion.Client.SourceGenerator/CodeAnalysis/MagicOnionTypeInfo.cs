@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.CodeAnalysis;
 
 namespace MagicOnion.Client.SourceGenerator.CodeAnalysis;
@@ -159,19 +159,21 @@ public class MagicOnionTypeInfo : IEquatable<MagicOnionTypeInfo>
     {
         if (type.IsArray)
         {
-            return CreateArray(CreateFromType(type.GetElementType()), type.GetArrayRank());
+            var elementType = type.GetElementType();
+            if (elementType == null) throw new InvalidOperationException("Array element type cannot be null.");
+            return CreateArray(CreateFromType(elementType), type.GetArrayRank());
         }
         else if (type.IsGenericType)
         {
             if (type.IsGenericTypeDefinition) throw new InvalidOperationException("The type must be constructed generic type.");
-            return Create(type.Namespace, type.Name.Substring(0, type.Name.IndexOf('`')), type.GetGenericArguments().Select(x => CreateFromType(x)).ToArray(), type.IsValueType);
+            return Create(type.Namespace ?? string.Empty, type.Name.Substring(0, type.Name.IndexOf('`')), type.GetGenericArguments().Select(x => CreateFromType(x)).ToArray(), type.IsValueType);
         }
         else if (type.IsEnum)
         {
-            return CreateEnum(type.Namespace, type.Name, CreateFromType(type.GetEnumUnderlyingType()));
+            return CreateEnum(type.Namespace ?? string.Empty, type.Name, CreateFromType(type.GetEnumUnderlyingType()));
         }
 
-        return Create(type.Namespace, type.GetFullDeclaringTypeName(), Array.Empty<MagicOnionTypeInfo>(), type.IsValueType);
+        return Create(type.Namespace ?? string.Empty, type.GetFullDeclaringTypeName(), Array.Empty<MagicOnionTypeInfo>(), type.IsValueType);
     }
 
     public static MagicOnionTypeInfo CreateFromSymbol(ITypeSymbol symbol)
@@ -227,7 +229,7 @@ public class MagicOnionTypeInfo : IEquatable<MagicOnionTypeInfo>
         }
     }
 
-    public bool Equals(MagicOnionTypeInfo other)
+    public bool Equals(MagicOnionTypeInfo? other)
     {
         if (ReferenceEquals(null, other)) return false;
         if (ReferenceEquals(this, other)) return true;
@@ -242,7 +244,7 @@ public class MagicOnionTypeInfo : IEquatable<MagicOnionTypeInfo>
                UnderlyingType! == other.UnderlyingType!;
     }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         if (ReferenceEquals(null, obj)) return false;
         if (ReferenceEquals(this, obj)) return true;

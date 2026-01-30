@@ -1,17 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
 
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
+    <NoWarn>NU1507;RS2008;CS1591;RS1036;</NoWarn>
     <!-- Source Generator / Roslyn Analyzer -->
     <IsRoslynComponent>true</IsRoslynComponent>
     <AnalyzerLanguage>cs</AnalyzerLanguage>
-
-    <!-- We don't need to publish the package to NuGet. MagicOnion.Client.SourceGenerator.dll is bundled with MagicOnion.Client  -->
-    <IsPackable>false</IsPackable>
+ 
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,10 +18,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis" PrivateAssets="all" />
-    <PackageReference Include="PolySharp">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>

@@ -5,7 +5,7 @@
 
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
+    <NoWarn>NU1507;CS1591</NoWarn>
     <DefineConstants>$(DefineConstants);USE_OBJECTPOOL_STREAMINGHUBPAYLOADPOOL</DefineConstants>
 
     <!-- NuGet -->
@@ -21,10 +21,6 @@
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore.Server" />
     <PackageReference Include="Grpc.Core.Api" />
-    <PackageReference Include="PolySharp">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
