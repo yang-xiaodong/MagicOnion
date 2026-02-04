@@ -9,7 +9,7 @@
 
     <!-- NuGet -->
     <IsPackable>true</IsPackable>
-    <PackageId>MagicOnion.Abstractions</PackageId>
+    <PackageId>Hanshan.MagicOnion.Abstractions</PackageId>
     <Description>MagicOnion interfaces and abstractions for server and client.
 Commonly used types:
 MagicOnion.IService&lt;TSelf&gt;

@@ -9,7 +9,7 @@
 
     <!-- NuGet -->
     <IsPackable>true</IsPackable>
-    <PackageId>MagicOnion.Serialization.MessagePack</PackageId>
+    <PackageId>Hanshan.MagicOnion.Serialization.MessagePack</PackageId>
     <Description>MagicOnion extension package for serialization using MessagePack.</Description>
   </PropertyGroup>
 

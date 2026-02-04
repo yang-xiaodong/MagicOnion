@@ -9,6 +9,7 @@
 
     <!-- NuGet -->
     <IsPackable>true</IsPackable>
+    <PackageId>Hanshan.MagicOnion.Shared</PackageId>
     <Description>Provides shared classes and interfaces used by MagicOnion server and client. $(MagicOnionPackageDescription)</Description>
   </PropertyGroup>
 

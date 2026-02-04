@@ -7,7 +7,7 @@
 
     <!-- NuGet -->
     <IsPackable>true</IsPackable>
-    <PackageId>MagicOnion</PackageId>
+    <PackageId>Hanshan.MagicOnion</PackageId>
     <Description>$(MagicOnionPackageDescription) This package is meta package that includes MagicOnion.Server and MagicOnion.Client.</Description>
 
     <!-- This is only a metapackage -->
