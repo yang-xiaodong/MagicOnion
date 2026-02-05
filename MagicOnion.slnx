@@ -30,6 +30,7 @@
   <Folder Name="/src/">
     <File Path="src/Directory.Build.props" />
     <Project Path="src/MagicOnion.Abstractions/MagicOnion.Abstractions.csproj" />
+    <Project Path="src/MagicOnion.Client/MagicOnion.Client.csproj" />
     <Project Path="src/MagicOnion.Internal/MagicOnion.Internal.csproj" />
     <Project Path="src/MagicOnion.Serialization.MessagePack/MagicOnion.Serialization.MessagePack.csproj" />
     <Project Path="src/MagicOnion.Server.SourceGenerator/MagicOnion.Server.SourceGenerator.csproj" />

@@ -9,12 +9,18 @@
     <!-- Source Generator / Roslyn Analyzer -->
     <IsRoslynComponent>true</IsRoslynComponent>
     <AnalyzerLanguage>cs</AnalyzerLanguage>
- 
+
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <IncludeBuildOutput>true</IncludeBuildOutput>
+    <BuildOutputTargetFolder>analyzers/dotnet/cs</BuildOutputTargetFolder>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <IsPackable>true</IsPackable>
+    <PackageId>Hanshan.MagicOnion.Client.SourceGenerator</PackageId>
+    <Description>MagicOnion Client Source Generator for AOT support</Description>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Include="$(OutputPath)\$(AssemblyName).dll" PackagePath="analyzers/dotnet/cs" Visible="false" />
-  </ItemGroup>
+  <!-- 由 BuildOutputTargetFolder 处理打包输出 -->
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis" PrivateAssets="all" />

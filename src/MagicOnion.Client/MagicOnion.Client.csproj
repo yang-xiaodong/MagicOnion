@@ -7,6 +7,9 @@
     <Nullable>enable</Nullable>
     <IsTrimmable>true</IsTrimmable>
     <NoWarn>NU1507;CS1591</NoWarn>
+    
+    <IsPackable>true</IsPackable>
+    <PackageId>Hanshan.MagicOnion.Client</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
